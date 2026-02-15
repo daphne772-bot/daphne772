@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김민수 | 소프트웨어 개발자 포트폴리오</title>
+    <meta name="description" content="소프트웨어 개발자 김민수의 자기소개 페이지입니다. 풀스택 개발 경험과 기술 역량을 확인하세요.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="introduction.css">
+</head>
+
+<body>
+    <!-- 파티클 배경 -->
+    <canvas id="particles"></canvas>
+
+    <!-- 네비게이션 -->
+    <nav id="navbar">
+        <div class="nav-brand">
+            <span class="brand-icon">&lt;/&gt;</span>
+            <span class="brand-text">KIM MINSU</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="nav-link active" data-section="hero">홈</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">소개</a></li>
+            <li><a href="#strengths" class="nav-link" data-section="strengths">강점</a></li>
+            <li><a href="#philosophy" class="nav-link" data-section="philosophy">신조</a></li>
+            <li><a href="#experience" class="nav-link" data-section="experience">경험</a></li>
+            <li><a href="#vision" class="nav-link" data-section="vision">포부</a></li>
+        </ul>
+        <button id="menu-toggle" class="menu-toggle" aria-label="메뉴 열기">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- 모바일 메뉴 -->
+    <div id="mobile-menu" class="mobile-menu">
+        <ul>
+            <li><a href="#hero" class="mobile-link">홈</a></li>
+            <li><a href="#about" class="mobile-link">소개</a></li>
+            <li><a href="#strengths" class="mobile-link">강점</a></li>
+            <li><a href="#philosophy" class="mobile-link">신조</a></li>
+            <li><a href="#experience" class="mobile-link">경험</a></li>
+            <li><a href="#vision" class="mobile-link">포부</a></li>
+        </ul>
+    </div>
+
+    <!-- 히어로 섹션 -->
+    <section id="hero" class="section hero-section">
+        <div class="hero-content">
+            <p class="hero-greeting animate-on-scroll">안녕하세요, 저는</p>
+            <h1 class="hero-name animate-on-scroll">
+                <span class="name-highlight">김민수</span>입니다
+            </h1>
+            <div class="typing-wrapper animate-on-scroll">
+                <span class="typing-label">I am a </span>
+                <span id="typing-text" class="typing-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-desc animate-on-scroll">
+                사용자에게 <strong>가치 있는 서비스</strong>를 제공하는<br>
+                소프트웨어 개발자
+            </p>
+            <div class="hero-cta animate-on-scroll">
+                <a href="#about" class="btn btn-primary">더 알아보기</a>
+                <a href="#experience" class="btn btn-outline">경험 보기</a>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <p>스크롤하여 탐색하기</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 소개 섹션 -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-number">01</span>
+                <h2 class="section-title">자기소개</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-card glass-card animate-on-scroll">
+                    <div class="about-icon">🎓</div>
+                    <h3>학력</h3>
+                    <p>컴퓨터공학 전공으로 프로그래밍의 기초를 탄탄히 다졌습니다.</p>
+                </div>
+                <div class="about-card glass-card animate-on-scroll" style="animation-delay: 0.1s">
+                    <div class="about-icon">💼</div>
+                    <h3>경력</h3>
+                    <p>졸업 후 2년간 스타트업에서 웹 개발 업무를 담당했습니다.</p>
+                </div>
+                <div class="about-card glass-card animate-on-scroll" style="animation-delay: 0.2s">
+                    <div class="about-icon">🚀</div>
+                    <h3>열정</h3>
+                    <p>빠르게 변화하는 IT 업계에서 새로운 기술을 학습하고 적용하는 것에 큰 흥미를 느낍니다.</p>
+                </div>
+                <div class="about-card glass-card animate-on-scroll" style="animation-delay: 0.3s">
+                    <div class="about-icon">✨</div>
+                    <h3>관심분야</h3>
+                    <p>사용자 경험을 개선하는 기술적 솔루션을 찾는 것을 좋아합니다.</p>
+                </div>
+            </div>
+            <div class="about-text glass-card animate-on-scroll">
+                <p>
+                    혁신적인 기술력과 우수한 개발 문화를 가진 환경에서 저의 기술적 역량을 더욱 발전시키고,
+                    의미 있는 프로젝트에 기여하고 싶습니다.
+                </p>
+            </div>
+
+            <!-- 기술 스택 -->
+            <div class="tech-stack animate-on-scroll">
+                <h3 class="tech-title">기술 스택</h3>
+                <div class="tech-grid">
+                    <div class="tech-item" data-level="90">
+                        <span class="tech-name">React / React Native</span>
+                        <div class="tech-bar">
+                            <div class="tech-fill" style="--fill-width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-level="85">
+                        <span class="tech-name">JavaScript / TypeScript</span>
+                        <div class="tech-bar">
+                            <div class="tech-fill" style="--fill-width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-level="80">
+                        <span class="tech-name">Node.js / Express</span>
+                        <div class="tech-bar">
+                            <div class="tech-fill" style="--fill-width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-level="75">
+                        <span class="tech-name">Cloud / MSA</span>
+                        <div class="tech-bar">
+                            <div class="tech-fill" style="--fill-width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-level="85">
+                        <span class="tech-name">HTML / CSS</span>
+                        <div class="tech-bar">
+                            <div class="tech-fill" style="--fill-width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item" data-level="70">
+                        <span class="tech-name">Database (SQL/NoSQL)</span>
+                        <div class="tech-bar">
+                            <div class="tech-fill" style="--fill-width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 강점 섹션 -->
+    <section id="strengths" class="section strengths-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-number">02</span>
+                <h2 class="section-title">성격의 장단점</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="strengths-grid">
+                <!-- 장점 -->
+                <div class="strength-column">
+                    <h3 class="column-title animate-on-scroll">
+                        <span class="column-icon">💪</span> 장점
+                    </h3>
+                    <div class="strength-card glass-card animate-on-scroll">
+                        <div class="strength-number">01</div>
+                        <h4>꾸준한 학습 의지</h4>
+                        <p>새로운 기술 트렌드에 관심이 많아 개인 시간을 활용해 온라인 강의를 수강하고 사이드 프로젝트를 진행합니다.</p>
+                        <div class="strength-tag">📚 자기개발</div>
+                    </div>
+                    <div class="strength-card glass-card animate-on-scroll">
+                        <div class="strength-number">02</div>
+                        <h4>협업과 소통</h4>
+                        <p>팀 프로젝트에서 다른 개발자, 디자이너, 기획자와 원활히 소통하며 공동의 목표를 달성하는 것을 중요하게 생각합니다.</p>
+                        <div class="strength-tag">🤝 팀워크</div>
+                    </div>
+                    <div class="strength-card glass-card animate-on-scroll">
+                        <div class="strength-number">03</div>
+                        <h4>문제 해결 지향적</h4>
+                        <p>복잡한 버그나 기술적 이슈에 직면했을 때 포기하지 않고 다양한 접근 방법을 시도하여 해결책을 찾습니다.</p>
+                        <div class="strength-tag">🔧 문제해결</div>
+                    </div>
+                </div>
+                <!-- 단점 및 개선 -->
+                <div class="strength-column">
+                    <h3 class="column-title animate-on-scroll">
+                        <span class="column-icon">🔄</span> 개선 노력
+                    </h3>
+                    <div class="weakness-card glass-card animate-on-scroll">
+                        <div class="weakness-icon">⚡</div>
+                        <h4>완벽주의 성향</h4>
+                        <p>때로는 코드의 완성도에 지나치게 집착하여 일정에 영향을 줄 수 있습니다.</p>
+                        <div class="improvement-box">
+                            <span class="improvement-label">💡 개선 방법</span>
+                            <p>우선순위를 명확히 하고 적정 수준의 완성도를 목표로 하는 연습을 하고 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 생활신조 섹션 -->
+    <section id="philosophy" class="section philosophy-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-number">03</span>
+                <h2 class="section-title">생활신조</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="philosophy-content animate-on-scroll">
+                <div class="quote-card">
+                    <div class="quote-marks">"</div>
+                    <blockquote class="philosophy-quote">
+                        기술은 사람을 위해 존재한다
+                    </blockquote>
+                    <div class="quote-marks closing">"</div>
+                </div>
+                <div class="philosophy-details glass-card">
+                    <div class="philosophy-item">
+                        <div class="philosophy-icon">👁️</div>
+                        <p>개발자로서 항상 <strong>사용자의 관점</strong>에서 생각하려 노력합니다.</p>
+                    </div>
+                    <div class="philosophy-item">
+                        <div class="philosophy-icon">💻</div>
+                        <p>아무리 기술적으로 뛰어난 코드라도 실제 사용자에게 <strong>도움이 되지 않는다면 의미가 없다</strong>고 생각합니다.</p>
+                    </div>
+                    <div class="philosophy-item">
+                        <div class="philosophy-icon">🎯</div>
+                        <p>사용자가 더 <strong>편리하고 효율적</strong>으로 업무를 처리할 수 있도록 돕는 것이 개발자의 사명이라고 믿습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 경험 섹션 -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-number">04</span>
+                <h2 class="section-title">학창시절 경험</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-badge">🏆 우수상 수상</div>
+                        <h3>교내 해커톤 — 지역 상권 활성화 앱</h3>
+                        <span class="timeline-date">대학교 3학년</span>
+                        <p>팀장을 맡아 5명의 팀원과 함께 <strong>48시간</strong> 동안 React Native로 모바일 앱을 완성했습니다.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">팀 리더십</span>
+                            <span class="tag">풀스택</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-badge">🛠️ 풀스택 개발</div>
+                        <h3>백엔드 API 설계부터 프론트엔드 구현</h3>
+                        <span class="timeline-date">해커톤 프로젝트</span>
+                        <p>전 과정에 참여하며 풀스택 개발 경험을 쌓았고, 짧은 시간 내에 팀원들의 역량을 파악하고 업무를 효율적으로 분배하는 리더십을 발휘했습니다.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">API 설계</span>
+                            <span class="tag">프론트엔드</span>
+                            <span class="tag">업무 분배</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-badge">🎓 멘토링</div>
+                        <h3>컴퓨터공학과 학회 활동 & 멘토링</h3>
+                        <span class="timeline-date">대학교 4년간</span>
+                        <p>후배들에게 프로그래밍을 가르치는 멘토링을 진행했습니다. 복잡한 개념을 쉽게 설명하는 능력을 기를 수 있었고, 이는 현재 코드 리뷰와 기술 공유에 큰 도움이 되고
+                            있습니다.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">멘토링</span>
+                            <span class="tag">코드 리뷰</span>
+                            <span class="tag">기술 공유</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 포부 섹션 -->
+    <section id="vision" class="section vision-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-number">05</span>
+                <h2 class="section-title">입사 후 포부</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="vision-roadmap">
+                <div class="roadmap-item animate-on-scroll">
+                    <div class="roadmap-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <div class="roadmap-content glass-card">
+                        <span class="roadmap-phase">Phase 1 — 적응기</span>
+                        <h3>팀 적응 & 역할 수행</h3>
+                        <p>개발 문화와 코딩 컨벤션에 빠르게 적응하여 팀의 일원으로서 역할을 다하겠습니다.</p>
+                    </div>
+                </div>
+                <div class="roadmap-connector"></div>
+                <div class="roadmap-item animate-on-scroll">
+                    <div class="roadmap-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg>
+                    </div>
+                    <div class="roadmap-content glass-card">
+                        <span class="roadmap-phase">Phase 2 — 성장기</span>
+                        <h3>도메인 이해 & 실력 향상</h3>
+                        <p>비즈니스 도메인에 대한 이해도를 높이고, 기존 팀원들과의 협업을 통해 개발 실력을 향상시키겠습니다.</p>
+                    </div>
+                </div>
+                <div class="roadmap-connector"></div>
+                <div class="roadmap-item animate-on-scroll">
+                    <div class="roadmap-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                            <line x1="9" y1="9" x2="9.01" y2="9" />
+                            <line x1="15" y1="9" x2="15.01" y2="9" />
+                        </svg>
+                    </div>
+                    <div class="roadmap-content glass-card">
+                        <span class="roadmap-phase">Phase 3 — 리더십</span>
+                        <h3>기술 리더 & 멘토링</h3>
+                        <p>기술 리더로 성장하여 주니어 개발자들을 멘토링하고, 새로운 기술 도입과 개발 프로세스 개선에 기여하고 싶습니다.</p>
+                    </div>
+                </div>
+                <div class="roadmap-connector"></div>
+                <div class="roadmap-item animate-on-scroll">
+                    <div class="roadmap-icon final-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                    </div>
+                    <div class="roadmap-content glass-card final-card">
+                        <span class="roadmap-phase">Ultimate Goal</span>
+                        <h3>혁신적인 서비스 개발의 핵심</h3>
+                        <p>IT 업계에서 인정받는 개발자가 되고, 사용자에게 진정한 가치를 제공하는 <strong>혁신적인 서비스 개발</strong>에 핵심적인 역할을 담당하고 싶습니다.
+                        </p>
+                        <div class="focus-areas">
+                            <span class="focus-tag">☁️ 클라우드 기술</span>
+                            <span class="focus-tag">🔗 마이크로서비스 아키텍처</span>
+                            <span class="focus-tag">📈 확장성 & 안정성</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="brand-icon">&lt;/&gt;</span>
+                <span>김민수 | Software Developer</span>
+            </div>
+            <p class="footer-quote">"기술은 사람을 위해 존재한다"</p>
+            <div class="footer-divider"></div>
+            <p class="footer-copy">&copy; 2026 Kim Minsu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 맨 위로 가기 버튼 -->
+    <button id="back-to-top" class="back-to-top" aria-label="맨 위로">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="18 15 12 9 6 15" />
+        </svg>
+    </button>
+
+    <script src="introduction.js"></script>
+</body>
+
+</html>
